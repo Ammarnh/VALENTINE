@@ -1,0 +1,237 @@
+/* Global Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #fff0f5, #ffe6f0);
+  color: #444;
+  overflow-x: hidden;
+}
+
+/* SPLASH SCREEN STYLING */
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 240, 245, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+.splash-content {
+  max-width: 400px;
+}
+#splash-message {
+  font-size: 2rem;
+  color: #e75480;
+  margin-bottom: 20px;
+}
+#splash-question {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#splash-question.show {
+  opacity: 1;
+}
+#splash-question p {
+  font-size: 1.5rem;
+  color: #e75480;
+  margin-bottom: 10px;
+}
+#splash-question input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ff9a9e;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+#splash-question button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #ff9a9e;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#splash-question button:hover {
+  background: #e75480;
+}
+.error {
+  color: red;
+  margin-top: 10px;
+}
+.hidden {
+  display: none;
+}
+
+/* HEADER HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: white;
+  font-family: 'Pacifico', cursive;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* ANNIVERSARY CLOCK */
+.anniversary-clock {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.anniversary-clock #clock {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e75480;
+  margin-top: 10px;
+}
+
+/* STORY SECTION (Pesan dari Aku) */
+.story {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.story p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* GALLERY SECTION */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+.polaroid {
+  background: #fff;
+  padding: 10px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.polaroid img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+/* Caption default hanya menampilkan "Momen X" */
+.polaroid figcaption {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #e75480;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+/* Saat polaroid aktif, foto membesar dan caption berubah ke caption detail */
+.polaroid.active {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+.polaroid.active figcaption {
+  /* Ambil data dari atribut data-detailed dengan JavaScript (lihat script.js) */
+  font-size: 1rem;
+  background-color: rgba(0,0,0,0.05);
+  padding: 5px;
+}
+
+/* LOVE QUOTES SECTION */
+.love-quotes {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.love-quotes #quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #e75480;
+  margin-bottom: 15px;
+}
+.love-quotes button {
+  background: #ff9a9e;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: inline-block;
+}
+.love-quotes button:hover {
+  background: #e75480;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fad0c4;
+  color: #333;
+  font-size: 0.9rem;
+  border-top: 2px solid #ff9a9e;
+  margin-top: 20px;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .anniversary-clock, .story, .love-quotes {
+    padding: 20px 15px;
+    margin: 15px;
+  }
+  #splash-message {
+    font-size: 1.8rem;
+  }
+  #splash-question p {
+    font-size: 1.3rem;
+  }
+  .gallery {
+    gap: 10px;
+  }
+  .polaroid {
+    padding: 5px;
+    border: 3px solid #fff;
+  }
+}

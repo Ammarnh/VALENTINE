@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valentine's Day Special</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- SPLASH SCREEN -->
+  <div id="splash">
+    <div class="splash-content">
+      <!-- Animasi awal: Tulisan animasi muncul hanya untuk animasi -->
+      <div id="splash-message">Ada surat dari pacar kamu nihhh 💌</div>
+      <div id="splash-question" class="hidden">
+        <p>Jawab pertanyaan: Kapan tanggal jadian kita?</p>
+        <input type="date" id="jadian-date" />
+        <button id="submit-date">Submit</button>
+        <div id="error-message" class="error hidden">Ups, salah deh. Coba lagi!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Dekorasi (opsional) -->
+  <div class="background-decor"></div>
+  
+  <!-- Header Hero -->
+  <header class="hero">
+    <h1>Happy Valentine's Day, Sayang! 💖</h1>
+    <p>Kenangan seru kita, tercatat di setiap detik.</p>
+  </header>
+  
+  <!-- Anniversary Clock Section -->
+  <section class="anniversary-clock">
+    <h2>Waktu Sejak Jadian Kita</h2>
+    <div id="clock">Loading...</div>
+  </section>
+  
+  <!-- Pesan Dari Aku (sebelumnya "Cerita Kita") -->
+  <section class="story">
+    <h2>Pesan Dari Aku</h2>
+    <p>
+      Happy Valentine’s Day, Sayang! 🍫💌🌹  
+      <br /><br />
+      Pertama-tama aku mau bilang, makasih banget udah jadi bagian dari hidup aku selama ini. Aku bener-bener bersyukur bisa ketemu kamu. Aku tahu, kamu udah ngasih banyak effort buat aku dan hubungan kita. Aku cuma bisa janji bakal terus belajar buat jadi lebih baik dari hari sebelumnya—supaya aku bisa pantas nemenin kamu lebih lama lagi. 😚  
+      <br /><br />
+      Makasih juga buat semua bantuan kamu selama ini. Aku nggak tau deh gimana jadinya kalau nggak ada kamu. Kamu selalu ada di saat aku butuh, bantuin aku, support aku, bahkan ngingetin aku kalau aku mulai nyerah sama diri sendiri. Semua itu bikin aku makin sayang sama kamu.  
+      <br /><br />
+      Dan, yappp  terima kasih banget karena kamu udah bisa nerima aku apa adanya. Setelah sekian lama (dan sekian banyak drama hehe), kamu tetep bertahan di samping aku.
+      <br /><br />
+      Aku juga makasih banget karena kamu selalu mau luangin waktu buat aku di tengah kesibukan kamu. Walau capek, kamu tetep nyempetin buat ketemu atau sekadar ngobrol biar aku nggak ngerasa sendirian. Itu sweet banget sih, asli! 😍  
+      <br /><br />
+      Oh iya, nggak terasa hubungan kita udah 5 bulan berjalan. Aku seneng banget karena kita udah ngelewatin banyak hal bareng—yang lucu, yang ngeselin, yang bikin ngakak, sampai yang bikin nangis (drama dikit gapapa ya, kan biar makin seru). Aku nggak sabar buat nambahin lebih banyak memori sama kamu di bulan-bulan selanjutnya.  
+      <br /><br />
+      Tapi… di balik semua itu, aku juga mau minta maaf.
+      <br /><br />
+      Maaf kalau selama ini aku banyak kurangnya. Aku sadar banget aku masih sering ngerasa kurang buat kamu, padahal itu sebenernya cuma pikiran aku yang lebay. 😅  
+      <br /><br />
+      Maaf kalau aku kadang suka ngeselin dan suka ngomong sembarangan. Aku nggak pernah maksud buat nyakitin kamu, tapi kadang mulut aku suka lebih cepet dari otak aku (maklum, bocah labil). 🙈  
+      <br /><br />
+      Maaf juga kalau aku suka banyak mau dan ngambek gara-gara hal kecil yang kadang nggak penting. Kadang aku suka jadi drama king dadakan, padahal aku tahu kamu capek banget ngehadapinnya. Tapi aku janji, aku bakal pelan-pelan belajar buat lebih santai dan nggak drama.  
+      <br /><br />
+      Dan yang terakhir…  
+      <br /><br />
+      Maaf kalau aku belum bisa jadi yang terbaik buat kamu. Tapi aku serius mau terus berusaha buat jadi orang yang bisa bikin kamu bangga. Karena buat aku, kamu itu spesial banget. 💖  
+      <br /><br />
+      So... Happy Valentine’s Day sekali lagi! Makasih karena udah selalu ada buat aku, udah ngasih aku rasa nyaman yang nggak bisa aku jelasin pake kata-kata. Aku sayang banget sama kamu. Jangan pernah bosen ya nemenin aku! 🌷✨  
+      <br /><br />
+      Love,  
+      <br />
+      Aku (yang selalu bikin drama kalau soal kamu)
+    </p>
+  </section>
+  
+  <!-- Galeri Foto (16 foto) -->
+  <section class="moments">
+    <h2>Momen-Momen Kita</h2>
+    <div class="gallery">
+      <!-- Setiap figure memiliki caption default ("Momen X") dan caption detail di data-detailed -->
+      <figure class="polaroid">
+        <img src="photo1.jpg" alt="Momen 1" data-detailed="chat pertama kita di Instagram" data-default="Momen 1" />
+        <figcaption data-default="Momen 1">Momen 1</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo2.jpg" alt="Momen 2" data-detailed="hehehheehhehehh tic tac toe" data-default="Momen 2" />
+        <figcaption data-default="Momen 2">Momen 2</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo3.jpg" alt="Momen 3" data-detailed="Aquarium date AHAHAHAHAHHAHA" data-default="Momen 3" />
+        <figcaption data-default="Momen 3">Momen 3</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo4.jpg" alt="Momen 4" data-detailed="pertama kali kita discord an barenggg" data-default="Momen 4" />
+        <figcaption data-default="Momen 4">Momen 4</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo5.jpg" alt="Momen 5" data-detailed="mie goyang sambil nunggu mie gacoan buka cabang" data-default="Momen 5" />
+        <figcaption data-default="Momen 5">Momen 5</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo6.jpg" alt="Momen 6" data-detailed="bakaran sekelas tapi sebelumnya berantem dulu" data-default="Momen 6" />
+        <figcaption data-default="Momen 6">Momen 6</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo7.jpg" alt="Momen 7" data-detailed="fotoo barengg pertama kitaa" data-default="Momen 7" />
+        <figcaption data-default="Momen 7">Momen 7</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo8.jpg" alt="Momen 8" data-detailed="ngerjainn P5 yang jualan ituu" data-default="Momen 8" />
+        <figcaption data-default="Momen 8">Momen 8</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo9.jpg" alt="Momen 9" data-detailed="Malioboro bakal jadi tempat favorit sih" data-default="Momen 9" />
+        <figcaption data-default="Momen 9">Momen 9</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo10.jpg" alt="Momen 10" data-detailed="agit nyempil cie ciee" data-default="Momen 10" />
+        <figcaption data-default="Momen 10">Momen 10</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo11.jpg" alt="Momen 11" data-detailed="foto pertama kita di sekolah gasieee" data-default="Momen 11" />
+        <figcaption data-default="Momen 11">Momen 11</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo12.jpg" alt="Momen 12" data-detailed="fotooo lucu pada jamannya, tapi yang sekarang lebih lucu" data-default="Momen 12" />
+        <figcaption data-default="Momen 12">Momen 12</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo13.jpg" alt="Momen 13" data-detailed="ujann ujanannn ampee basahh cihuyy" data-default="Momen 13" />
+        <figcaption data-default="Momen 13">Momen 13</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo14.jpg" alt="Momen 14" data-detailed="Pertama kali nemeninn kamu potong rambutt" data-default="Momen 14" />
+        <figcaption data-default="Momen 14">Momen 14</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo15.jpg" alt="Momen 15" data-detailed="kitaaa abis cobain Cinepolis" data-default="Momen 15" />
+        <figcaption data-default="Momen 15">Momen 15</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="photo16.jpg" alt="Momen 16" data-detailed="kitaa makann ramen secara tiba-tibaa woeee" data-default="Momen 16" />
+        <figcaption data-default="Momen 16">Momen 16</figcaption>
+      </figure>
+    </div>
+  </section>
+  
+  <!-- Bagian Quotes -->
+  <section class="love-quotes">
+    <h2>random quotes</h2>
+    <div id="quote">"Masa SMA itu, kayak petualangan pertama yang bikin hidup jadi seru!"</div>
+    <button id="new-quote">Quote Baru</button>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <p>With Love, Always & Forever ❤️</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
